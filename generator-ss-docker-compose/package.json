@@ -2,12 +2,18 @@
   "dependencies": {
     "yeoman-generator": "^0.24.1",
     "chalk": "^1.0.0",
-    "yosay": "^1.0.2"
+    "yosay": "^1.0.2",
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "yeoman-assert": "^2.0.0"
   },
   "keywords": [
     "yeoman-generator"
-  ]
+  ],
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
